@@ -3,45 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
+    <title>Charity: Water - Landing Page</title>
+    <!-- Use Proxima Nova font from Google Fonts (or fallback to system sans-serif) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proxima+Nova:400,700&display=swap">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
-    <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
 
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
+    <div class="header">
+        <!-- Logo image for charity: water -->
+        <img src="img/cw_logo-2.png" alt="charity: water logo" style="height:30px;">
+        <div class="free-trial">Free Trial</div>
+    </div>
 
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Give Families a Brighter Future with Clean, Sustainable Water</h1>
+            <p>Through your phone, 100% of your donation will fund solar-powered, GPS-monitored wells in Africa and South Asia, with real-time updates that let you celebrate the hope and health you bring.</p>
+            <div class="cta">
+                <!-- Small white box for the text and button -->
+                <div class="cta-box">
+                    <span>TAP TO TRANSFORM LIVES</span>
+                    <button>NOW</button>
+                </div>
+            </div>
         </div>
-    </section>
+        <div class="hero-image">
+            <!-- Real photo: Ethiopia, 2019 -->
+            <!-- The image is tilted 8 degrees clockwise and moved slightly to the right using a CSS class -->
+            <img src="img/7255_Ethiopia_2019_CG-.jpg" alt="Family at water pump in Ethiopia, 2019" class="tilted-image">
+        </div>
+    </div>
 
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
-    </section>
+    <!-- Products section is now in its own white box below the blue hero section -->
+    <div class="products-section">
+        <div class="products">
+            <!-- Product images with subtitles -->
+            <div class="product-item">
+                <img src="img/Afridev-V1.png" alt="Afridev V1">
+                <div class="product-caption">Afridev V1</div>
+            </div>
+            <div class="product-item">
+                <img src="img/Afridev-V2.png" alt="Afridev V2">
+                <div class="product-caption">Afridev V2</div>
+            </div>
+            <div class="product-item">
+                <img src="img/IndiaV1.png" alt="India Mark II">
+                <div class="product-caption">India Mark II</div>
+            </div>
+            <div class="product-item">
+                <img src="img/Piped.png" alt="Piped">
+                <div class="product-caption">Piped</div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

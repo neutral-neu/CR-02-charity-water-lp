@@ -1,198 +1,289 @@
-/* charity: water Brand Colors & Fonts
-
-Primary Colors:
-- Yellow:     #FFC907
-- Blue:       #2E9DF7
-
-Secondary Colors:
-- Light Blue: #8BD1CB
-- Green:      #4FCB53
-- Orange:     #FF902A
-- Red:        #F5402C
-- Dark Green: #159A48
-- Pink:       #F16061
-
-Fonts:
-- Proxima Nova
-- Avenir
-
-*/
-
-/* 
-  Charity: Water Landing Page Styles
-  This CSS uses the provided color palette and beginner-friendly styles.
-*/
-
-/* Set up the main font and background color for the whole page */
 body {
-  background-color: #f4f8fb; /* Soft light blue for a fresh look */
-  font-family: 'Avenir', 'Proxima Nova', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #222;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-/* Add a slight shadow and rounded corners to each section for depth */
-section {
-  background: #fff; /* White background for sections */
-  border-radius: 12px; /* Rounded corners */
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.07); /* Soft blue shadow */
-  margin: 24px 10px; /* Space between sections */
-  padding: 24px 16px;
+.header {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
 }
 
-/* Hero Section Styles */
+.header img {
+    height: 30px;
+    /* Add transition for smooth hover effect */
+    transition: transform 0.2s;
+}
+
+.header img:hover {
+    /* Slight pop out on hover */
+    transform: scale(1.08);
+}
+
+.free-trial {
+    background-color: #ffa500;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    /* Add transition for smooth hover effect */
+    transition: background 0.2s, transform 0.2s;
+}
+
+.free-trial:hover {
+    /* Slightly darker orange and pop out */
+    background-color: #e59400;
+    transform: scale(1.07);
+}
+
 .hero {
-  position: relative; /* Needed for overlay */
-  /* Set a background image that covers the whole section */
-  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80');
-  background-size: cover;      /* Make the image cover the whole area */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat;
-  color: #fff;                 /* White text for contrast */
-  text-align: center;          /* Center the text */
-  padding: 60px 20px;          /* Add space above and below */
-  border-radius: 0 0 16px 16px; /* Only round bottom corners */
-
-  /* Add a dark overlay for better text readability */
-  /* This uses a simple linear-gradient overlay */
-  background-blend-mode: darken;
-  background-color: rgba(46, 157, 247, 0.45); /* Blue overlay */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #4f819d;
+    color: white;
 }
 
-/* Make the headline bold and modern */
-.hero h1 {
-  font-size: 2.5em;
-  font-weight: bold;
-  letter-spacing: 1px;
-  margin-bottom: 15px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Soft shadow for readability */
+.hero-text {
+    max-width: 500px;
+    margin-right: 20px;
 }
 
-/* Style the subheadline */
-.hero p {
-  font-size: 1.2em;
-  margin-top: 0;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.12);
+.hero-text h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
 }
 
-/* Story Section Styles */
-.story {
-  background-color: #8BD1CB; /* Secondary Light Blue */
-  color: #222;
-  text-align: center;
-  padding: 30px 20px;
+.hero-text p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
 
-/* Add accent color to section headings */
-h2 {
-  color: #2E9DF7; /* Primary blue */
-  margin-top: 0;
-  font-weight: bold;
+.hero-image img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
-/* Call-to-Action Section Styles */
-.call-to-action {
-  background-color: #FFC907; /* Primary Yellow */
-  color: #222;
-  text-align: center;
-  padding: 30px 20px;
+/* Tilted image style for the Ethiopia photo */
+.tilted-image {
+    /* Tilt the image 8 degrees clockwise */
+    transform: rotate(8deg);
+    /* Move the image slightly to the right */
+    margin-left: 24px;
+    /* Keep the same rounded corners */
+    border-radius: 8px;
+    /* Make sure the image never grows larger than its container */
+    max-width: 100%;
+    max-height: 420px;
+    width: auto;
+    height: auto;
 }
 
-/* Style the impact story image */
-.impact-image {
-  width: 100%;
-  max-width: 320px;
-  border-radius: 10px;
-  margin-bottom: 16px;
-  box-shadow: 0 2px 8px rgba(46, 157, 247, 0.10);
+.cta {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
 }
 
-/* Donate Button Styles */
-.donate-button {
-  display: inline-block;
-  background-color: #4FCB53; /* Green */
-  color: #fff;
-  padding: 14px 32px;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 1.1em;
-  margin-top: 18px;
-  box-shadow: 0 2px 8px rgba(79, 203, 83, 0.10);
-  transition: background 0.3s, transform 0.2s;
-  border: none;
-  cursor: pointer;
+/* Small white box for the CTA text and button */
+.cta-box {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Add transition for smooth hover effect */
+    transition: box-shadow 0.2s, transform 0.2s;
 }
 
-/* Change button color when hovered */
-.donate-button:hover {
-  background-color: #159A48; /* Dark Green */
-  transform: translateY(-2px) scale(1.04); /* Slight lift */
+.cta-box:hover {
+    /* Slight pop out and stronger shadow on hover */
+    transform: scale(1.04);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
 }
 
-/* Add some spacing between sections */
-section {
-  margin-bottom: 20px;
+.cta span {
+    color: #000; /* Make the text black */
 }
 
-/* 
-  Media Queries for Responsive Design
-  Media queries help make your website look good on different screen sizes,
-  like phones (small screens) and computers (large screens).
-*/
-
-/* This media query applies styles when the screen is 600px wide or less (like on most phones) */
-@media (max-width: 600px) {
-  /* Make hero section padding smaller on small screens */
-  .hero {
-    padding: 32px 8px;
-    font-size: 1em;
-  }
-
-  /* Make headline font size smaller so it fits on small screens */
-  .hero h1 {
-    font-size: 1.4em;
-  }
-
-  /* Make subheadline font size smaller */
-  .hero p {
-    font-size: 1em;
-  }
-
-  /* Make story and call-to-action sections have less padding */
-  .story,
-  .call-to-action,
-  .donation-section {
-    padding: 14px 8px;
-  }
-
-  /* Make impact story image smaller and stack above the text */
-  .impact-content {
-    display: block; /* Stack items vertically */
-    text-align: center;
-  }
-
-  .impact-image {
-    width: 90%;    /* Make image take up most of the width */
-    max-width: 220px;
-  }
+.cta button {
+    background-color: #ffa500;
+    border: none;
+    padding: 12px 20px;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+    /* Add transition for smooth hover effect */
+    transition: background 0.2s, transform 0.2s;
 }
 
-/* This media query applies styles when the screen is wider than 600px (like on tablets and computers) */
-@media (min-width: 601px) {
-  /* Show image and text side by side in the impact story */
-  .impact-content {
-    display: flex;           /* Place items in a row */
-    align-items: center;     /* Vertically center items */
-    justify-content: center; /* Center the whole group */
-    gap: 28px;               /* Space between image and text */
-    text-align: left;
-    max-width: 800px;
+.cta button:hover {
+    /* Slightly darker orange and pop out */
+    background-color: #e59400;
+    transform: scale(1.07);
+}
+
+.products-section {
+    /* Set background color to #FFF7E1 (light orange) for the box behind the 4 images */
+    background: #FFF7E1;
+    /* Increase the padding to make the colored box around the images larger */
+    padding: 60px 60px;
     margin: 0 auto;
-  }
+    max-width: 900px;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(46,157,247,0.08);
+    margin-top: 32px;
+}
 
-  .impact-image {
-    width: 300px;
-  }
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 0;
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Add transition for smooth hover effect on the whole product item */
+    transition: transform 0.2s;
+}
+
+/* ----------------------------- */
+/* Responsive Design Starts Here */
+/* ----------------------------- */
+
+@media (max-width: 1000px) {
+    .products-section {
+        padding: 40px 10px;
+        max-width: 100%;
+    }
+    .products {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    .hero {
+        flex-direction: column;
+        padding: 30px 10px;
+        text-align: center;
+    }
+    .hero-text {
+        margin-right: 0;
+        max-width: 100%;
+    }
+    .hero-image img {
+        margin-left: 0;
+        max-width: 100vw;
+        width: 100%;
+        height: auto;
+    }
+    .tilted-image {
+        margin-left: 0;
+        max-width: 98vw;
+        max-height: 70vw;
+        width: auto;
+        height: auto;
+        transform: rotate(8deg);
+    }
+    .products-section {
+        padding: 30px 5px;
+    }
+    .products {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 500px) {
+    .header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 5px;
+    }
+    .products-section {
+        padding: 16px 2px;
+        border-radius: 8px;
+    }
+    .products img {
+        max-width: 90vw;
+        min-width: 0;
+        min-height: 0;
+        max-height: 120px;
+        padding: 10px;
+    }
+    .product-caption {
+        font-size: 16px;
+    }
+    .cta-box {
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px 8px;
+    }
+    .cta button {
+        width: 100%;
+        font-size: 15px;
+        padding: 10px 0;
+    }
+}
+
+.product-item:hover {
+    /* Slight pop out for the whole product item */
+    transform: scale(1.04);
+}
+
+.products img {
+    max-width: 160px; /* 2x original size */
+    min-width: 160px;
+    min-height: 160px;
+    max-height: 160px;
+    /* Set the padding background behind each image to #222520 (dark greenish gray) */
+    background-color: #222520;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(46,157,247,0.1); /* Blue shadow */
+    /* Add transition for smooth hover effect */
+    transition: box-shadow 0.2s, transform 0.2s;
+    object-fit: contain; /* Make sure all images fit nicely */
+}
+
+.products img:hover {
+    /* Pop out effect and stronger shadow */
+    transform: scale(1.07);
+    box-shadow: 0 4px 24px rgba(46,157,247,0.18);
+}
+
+.product-caption {
+    margin-top: 14px;
+    font-size: 20px;
+    /* Use Proxima Nova font for the product subtitles, fallback to Arial and sans-serif */
+    font-family: 'Proxima Nova', Arial, sans-serif;
+    color: #1A1A1A; /* Dark gray */
+    text-align: center;
+    font-weight: bold;
+    /* Add transition for smooth hover effect */
+    transition: color 0.2s;
+}
+
+.product-item:hover .product-caption {
+    /* Change color on hover for product subtitle */
+    color: #ffa500;
 }
